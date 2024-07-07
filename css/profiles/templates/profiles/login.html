@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Include Tailwind CSS -->
+    {% load static %}
+    <link href="{% static 'profiles/static/profiles/css/output.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-color-1 { background-color: #d09d8f; }
+        .bg-color-2 { background-color: #dcd4ca; }
+        .text-color-3 { color: rgb(146, 133, 134); }
+        .bg-color-4 { background-color: #9C5C7B; }
+        
+    </style>
+</head>
+<body class="bg-color-2 text-gray-800 min-h-screen flex items-center justify-center">
+
+<div class="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-4xl font-bold mb-6 text-center text-color-3">Login</h2>
+    <form method="post" class="space-y-4">
+        {% csrf_token %}
+        <div class="space-y-2">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="font-semibold  w-full bg-color-4 text-white py-2 px-4 rounded-lg ">Login</button>
+    </form>
+</div>
+<script>
+    // Add padding and custom styling to the input fields
+    document.querySelectorAll('input').forEach(input => {
+        input.classList.add('input-field','my-2','px-3', 'p-2', 'w-60','border', 'border-taupe', 'rounded-md','border-solid');
+        /*input.onfocus = () => input.style.backgroundColor = '#dcd4ca';
+        input.onblur = () => input.style.backgroundColor = 'white';*/
+    });
+</script>
+</body>
+</html>

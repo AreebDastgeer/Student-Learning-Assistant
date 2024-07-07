@@ -1,0 +1,11 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Tailwind CSS color classes */
+.bg-taupe { background-color: #928586; }
+.bg-rosy { background-color: #D09D8F; }
+.bg-champagne { background-color: #EDDACF; }
+.bg-cambridge { background-color: #88C49C; }
+.bg-china { background-color: #9C5C7B; }
+.bg-light { background-color: #dcd4ca; }

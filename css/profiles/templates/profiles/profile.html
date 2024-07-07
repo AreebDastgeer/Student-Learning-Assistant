@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!-- Include Tailwind CSS -->
+    {% load static %}
+    <link href="{% static 'profiles/static/profiles/css/output.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-color-1 { background-color: rgb(208, 157, 143); }
+        .bg-color-2 { background-color: rgb(237, 218, 207); }
+        .text-color-3 { color: rgb(146, 133, 134); }
+        .bg-color-4 { background-color: #9C5C7B; }
+    </style>
+</head>
+<body class="bg-color-2 text-gray-800 min-h-screen flex flex-col items-center justify-center">
+    <h1 class="text-4xl font-bold mb-4 text-color-3 ">Your Personalized Learning Assistant</h1>
+    <div class="flex space-x-8 items-center">
+<div class="max-w-md w-full p-6 bg-white rounded-lg shadow-lg text-center">
+    <h2 class="text-3xl font-bold mb-4 text-color-3 ">Welcome {{ user.username }}</h2>
+    <p class="text-lg mb-2"><strong>Username:</strong> {{ user.username }}</p>
+    <p class="text-lg mb-4"><strong>Email:</strong> {{ user.email }}</p>
+    <a href="{% url 'logout' %}" class="bg-color-1 text-white py-2 px-4 rounded-lg hover:bg-color-1-dark font-semibold">Logout</a>
+</div>
+</div>
+</body>
+</html>
