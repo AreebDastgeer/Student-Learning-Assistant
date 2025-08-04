@@ -1,2 +1,2 @@
 # Student-Learning-Assistant
-A personalized student learning assistant developed in python 
+A personalized student learning assistant under development in python 
